@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLG Montage</title>
+  <style>
+    body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Set the height of the body to 100% of the viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Align content to the bottom */
+            align-items: center; /* Center content horizontally */
+        }
+
+    div {
+        text-align: center; /* Center text inside the div */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .item {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      pointer-events: none;
+      animation: fly 5s linear infinite;
+    }
+    .doritos {
+      background-image: url('https://pngimg.com/uploads/doritos/doritos_PNG5.png'); /* Replace 'doritos.png' with your Doritos image */
+    }
+    .mountain-dew {
+      background-image: url('data:image/jpeg;base64,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'); /* Replace 'mountain-dew.png' with your Mountain Dew image */
+    }
+    @keyframes fly {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(50vw, -50vh);
+      }
+      50% {
+        transform: translate(100vw, 0);
+      }
+      75% {
+        transform: translate(50vw, 50vh);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    .title {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #000;
+      font-size: 30px;
+    }
+    .sniper-scope {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('https://www.pinclipart.com/picdir/big/200-2003249_scope-png-call-of-duty-ads-sniper-clipart.png') center/contain no-repeat; /* Replace 'sniper-scope.png' with your image */
+      pointer-events: none; /* Make sure clicks go through the scopes */
+    }
+  </style>
+</head>
+<body>
+
+    <div class="title">MLG MONTAGE</div>
+    <div>
+        <h1>GPT Prompts</h1>
+        <p>
+            make a webpage that has a mlg quickscope montage playing on it
+        </p>
+        <p>
+            no, I want you to make the montage using elements
+        </p>
+        <p>
+            no, I want sniper scopes to randomly appear on the screen
+        </p>
+        <p>
+            I do not see them appearing
+        </p>
+        <p>
+            make it so they only appear for 1 second
+        </p>
+        <p>
+            make doritos an mountain dew fly all over the screen
+        </p>
+        <p>
+            combine the flying doritos and mountain dew page with the most recent sniper scope iteration and add a 300px title: "MLG MONTAGE"
+        </p>
+    </div>
+
+    <script>
+      // Function to create a random sniper scope
+      function createRandomScope() {
+        const scope = document.createElement('div');
+        scope.className = 'sniper-scope';
+        
+        // Calculate random position within the viewport
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        // Set position
+        scope.style.left = x + 'px';
+        scope.style.top = y + 'px';
+        
+        // Append to the body
+        document.body.appendChild(scope);
+    
+        // Remove the scope after 1 second
+        setTimeout(() => {
+          document.body.removeChild(scope);
+        }, 1000); // 1000 milliseconds (1 second)
+      }
+    
+      // Function to create scopes at intervals
+      function createScopesAtIntervals() {
+        setInterval(createRandomScope, 1000); // Create a scope every 3 seconds (adjust as needed)
+      }
+    
+      // Start creating scopes
+      createScopesAtIntervals();
+    
+      // Function to create a flying item
+      function createFlyingItem(className) {
+        const item = document.createElement('div');
+        item.className = 'item ' + className;
+        
+        // Calculate random position within the viewport
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        // Set position
+        item.style.left = x + 'px';
+        item.style.top = y + 'px';
+        
+        // Append to the body
+        document.body.appendChild(item);
+    
+        // Remove the item after 5 seconds
+        setTimeout(() => {
+          document.body.removeChild(item);
+        }, 5000); // 5000 milliseconds (5 seconds)
+      }
+    
+      // Function to create flying Doritos
+      function createFlyingDoritos() {
+        createFlyingItem('doritos');
+      }
+    
+      // Function to create flying Mountain Dew
+      function createFlyingMountainDew() {
+        createFlyingItem('mountain-dew');
+      }
+    
+      // Function to create items at intervals
+      function createItemsAtIntervals() {
+        setInterval(createFlyingDoritos, 500); // Create Doritos every 5 seconds
+        setInterval(createFlyingMountainDew, 500); // Create Mountain Dew every 7 seconds
+      }
+    
+      // Start creating items
+      createItemsAtIntervals();
+    </script>
+    
+    </div>
+    </body>
+    </html>
