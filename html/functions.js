@@ -7,10 +7,10 @@ function button1()
     currentStyle = localStorage.getItem("page_stylesheet_name");
 
     // Toggle between styles
-    if (currentStyle === "styles.css") {
-        localStorage.setItem("page_stylesheet_name", "styles2.css");
+    if (currentStyle === "/html/styles.css") {
+        localStorage.setItem("page_stylesheet_name", "/html/styles2.css");
     } else {
-        localStorage.setItem("page_stylesheet_name", "styles.css");
+        localStorage.setItem("page_stylesheet_name", "/html/styles.css");
     }
 
     // Load the updated style
@@ -22,7 +22,7 @@ function load_style()
     pages_style = localStorage.getItem("page_stylesheet_name");
     if (pages_style === null)
     {
-        pages_style = "styles2.css";
+        pages_style = "/html/styles2.css";
     }
     console.log(document.getElementById("stylesheet"));
     document.getElementById("stylesheet").href = pages_style;
@@ -30,13 +30,13 @@ function load_style()
 
 function mode1()
 {
-    localStorage.setItem("page_stylesheet_name", "styles.css");
+    localStorage.setItem("page_stylesheet_name", "/html/styles.css");
     load_style();
 }
 
 function mode2()
 {
-    localStorage.setItem("page_stylesheet_name", "styles2.css");
+    localStorage.setItem("page_stylesheet_name", "/html/styles2.css");
     load_style();
 }
 
